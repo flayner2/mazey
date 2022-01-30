@@ -24,12 +24,14 @@ class Cell:
         w: float = SIZE,
         h: float = SIZE,
         walls: list = [True, True, True, True],
+        visited: bool = False,
     ) -> None:
         self.x = x
         self.y = y
         self.w = w
         self.h = h
         self.walls = walls
+        self.visited = visited
 
     def render(self, surface: pg.surface.Surface) -> None:
         if self.walls[0]:
